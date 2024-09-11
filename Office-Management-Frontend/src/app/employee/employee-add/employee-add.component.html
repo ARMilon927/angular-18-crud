@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="d-sm-flex align-items-center">
+        <div class="col-sm-8">
+            <h3>Employee Add: </h3>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-2">
+            <a class="btn btn-primary" style="float:right;" routerLink="">Back</a>
+        </div>
+    </div>
+    <form [formGroup]="employee" (ngSubmit)="onSubmit()">
+        <div class="mb-3 row">
+            <label for="firstName" class="col-sm-2 col-form-label"> First Name: </label>
+            <div class="col-sm-10">
+                <input type="text" id="firstName" formControlName="firstName" name="firstName" required>
+            </div>
+
+        </div>
+        <div class="mb-3 row">
+            <label for="lastName" class="col-sm-2 col-form-label">Last Name:</label>
+            <div class="col-sm-10"><input type="text" id="lastName" formControlName="lastName" name="lastName" required>
+            </div>
+
+        </div>
+        <div class="mb-3 row">
+            <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+            <div class="col-sm-10"> <input type="text" id="phone" formControlName="phone" name="phone"> </div>
+
+        </div>
+        <div class="mb-3 row">
+            <label for="email" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-10"><input type="email" id="email" formControlName="email" name="email" required></div>
+
+        </div>
+        <div class="mb-3 row">
+            <label for="address" class="col-sm-2 col-form-label">Address:</label>
+            <div class="col-sm-10"><input type="address" id="address" formControlName="address" name="address"></div>
+
+        </div>
+        <button type="submit" class="btn btn-primary mb-3">Add Employee</button>
+    </form>
+</div>
